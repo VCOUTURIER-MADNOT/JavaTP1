@@ -12,7 +12,7 @@ public abstract class Personnel {
 		this.nom = new String();
 		this.prenom = new String();
 	}
-	
+
 	public String getNom() {
 		return this.nom;
 	}
