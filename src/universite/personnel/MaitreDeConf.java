@@ -34,13 +34,13 @@ public class MaitreDeConf extends Personnel implements Enseignant, Chercheur{
 		this.nbCours = (_nbCours >= 0) ? _nbCours : 0;
 	}
 	
+	public String getSujetConf() {
+		return sujetConf;
+	}
+	
 	public Object clone()
 	{
 		return new MaitreDeConf(this);
-	}
-	
-	public String getSujetConf() {
-		return sujetConf;
 	}
 
 	@Override
