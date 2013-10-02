@@ -84,7 +84,7 @@ public class UFR implements Cloneable, XMLSerializer{
 
 	@Override
 	public String toXML() {
-		String className = this.getClass().toString();
+		String className = this.getClass().getSimpleName();
 		String s = "<" + className + ">";
 		for(Batiment batiment : this.batiments){
 			s += batiment.toXML();

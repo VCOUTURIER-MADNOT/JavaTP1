@@ -69,7 +69,7 @@ public class Batiment implements Cloneable, XMLSerializer{
 
 	@Override
 	public String toXML() {
-		String className = this.getClass().toString();
+		String className = this.getClass().getSimpleName();
 		String s = "<" + className + ">";
 		s += "<id>" + this.id + "</id>";
 		for(Salle salle : this.salles){

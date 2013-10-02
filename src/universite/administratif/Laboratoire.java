@@ -57,7 +57,7 @@ public class Laboratoire implements Cloneable, XMLSerializer{
 
 	@Override
 	public String toXML() {
-		String className = this.getClass().toString();
+		String className = this.getClass().getSimpleName();
 		String s = "<" + className + ">";
 		
 		for(Chercheur chercheur : this.chercheurs){

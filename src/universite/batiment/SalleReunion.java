@@ -43,7 +43,7 @@ public class SalleReunion extends Salle implements Cloneable {
 
 	@Override
 	public String toXML() {
-		String className = this.getClass().toString();
+		String className = this.getClass().getSimpleName();
 		String s = "<" + className + ">";
 		s += "<nom>" + this.nom + "</nom>";
 		s += "</" + className + ">";

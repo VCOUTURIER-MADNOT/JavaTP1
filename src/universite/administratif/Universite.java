@@ -107,7 +107,7 @@ public class Universite implements Cloneable, XMLSerializer{
 	}
 	
 	public String toXML(){
-		String className = this.getClass().toString();
+		String className = this.getClass().getSimpleName();
 		String s = "<" + className + ">";
 		for(UFR ufr : this.ufrs){
 			s += ufr.toXML();

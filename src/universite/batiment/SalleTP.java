@@ -44,7 +44,7 @@ public class SalleTP extends Salle implements Cloneable {
 
 	@Override
 	public String toXML() {
-		String className = this.getClass().toString();
+		String className = this.getClass().getSimpleName();
 		String s = "<" + className + ">";
 		s += "<nbPostes>" + this.nbPostes + "</nbPostes>";
 		s += "</" + className + ">";
