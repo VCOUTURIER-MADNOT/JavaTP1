@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import universite.annotations.MethodeToString;
 
-public class Professeur extends Personnel implements Enseignant, Chercheur{
+public class Professeur extends Personnel implements Cloneable, Enseignant, Chercheur{
 
 	private ArrayList<String> matieres;
 	private boolean cherche;

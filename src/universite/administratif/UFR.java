@@ -6,7 +6,7 @@ import universite.annotations.MethodeToString;
 import universite.batiment.Batiment;
 import universite.interfaces.XMLSerializer;
 
-public class UFR implements XMLSerializer{
+public class UFR implements Cloneable, XMLSerializer{
 
 	private ArrayList<Batiment> batiments;
 	private ArrayList<Departement> departements;

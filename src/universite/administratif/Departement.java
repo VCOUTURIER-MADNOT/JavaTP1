@@ -6,7 +6,7 @@ import universite.annotations.MethodeToString;
 import universite.interfaces.XMLSerializer;
 import universite.personnel.Enseignant;
 
-public class Departement implements XMLSerializer{
+public class Departement implements Cloneable, XMLSerializer{
 
 	private ArrayList<Enseignant> enseignants;
 	

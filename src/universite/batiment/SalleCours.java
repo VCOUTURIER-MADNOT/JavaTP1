@@ -5,7 +5,7 @@ import universite.administratif.Laboratoire;
 import universite.administratif.UFR;
 import universite.annotations.MethodeToString;
 
-public class SalleCours extends Salle {
+public class SalleCours extends Salle implements Cloneable {
 	
 	private int nbPlaces;
 

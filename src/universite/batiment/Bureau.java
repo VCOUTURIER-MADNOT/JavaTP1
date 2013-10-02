@@ -9,7 +9,7 @@ import universite.annotations.MethodeToString;
 import universite.interfaces.XMLSerializer;
 import universite.personnel.Personnel;
 
-public class Bureau extends Salle{
+public class Bureau extends Salle implements Cloneable {
 
 	private ArrayList<Personnel> proprietaire;
 	

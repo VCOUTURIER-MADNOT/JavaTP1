@@ -1,7 +1,7 @@
 package universite.batiment;
 import universite.interfaces.XMLSerializer;
 
-public abstract class Salle implements XMLSerializer{
+public abstract class Salle implements Cloneable, XMLSerializer{
 	
 	private static int 		 currentId = 0;
 	private int 			 id;

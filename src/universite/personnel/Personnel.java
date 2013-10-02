@@ -2,7 +2,7 @@ package universite.personnel;
 
 import universite.interfaces.XMLSerializer;
 
-public abstract class Personnel implements XMLSerializer{
+public abstract class Personnel implements Cloneable, XMLSerializer{
 	
 	private static int currentId = 0;
 	private int id;

@@ -2,7 +2,7 @@ package universite.personnel;
 
 import universite.annotations.MethodeToString;
 
-public class MaitreDeConf extends Personnel implements Enseignant, Chercheur{
+public class MaitreDeConf extends Personnel implements Cloneable, Enseignant, Chercheur{
 
 	private String sujetConf;
 	private int nbCours;

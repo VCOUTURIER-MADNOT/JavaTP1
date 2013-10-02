@@ -2,7 +2,7 @@ package universite.personnel;
 
 import universite.annotations.MethodeToString;
 
-public class ChargeRecherche extends Personnel implements Chercheur{
+public class ChargeRecherche extends Personnel implements Cloneable, Chercheur{
 
 	private int anciennete;
 	private String sujetRecherche;

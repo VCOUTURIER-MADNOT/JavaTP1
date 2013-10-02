@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import universite.annotations.MethodeToString;
 import universite.interfaces.XMLSerializer;
 
-public class Universite implements XMLSerializer{
+public class Universite implements Cloneable, XMLSerializer{
 
 	private ArrayList<UFR> ufrs;
 	private ArrayList<Laboratoire> laboratoires;

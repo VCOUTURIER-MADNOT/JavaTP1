@@ -2,7 +2,7 @@ package universite.batiment;
 
 import universite.annotations.MethodeToString;
 
-public class SalleReunion extends Salle {
+public class SalleReunion extends Salle implements Cloneable {
 
 	private String nom;
 	

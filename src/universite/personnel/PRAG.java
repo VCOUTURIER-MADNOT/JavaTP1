@@ -2,7 +2,7 @@ package universite.personnel;
 
 import universite.annotations.MethodeToString;
 
-public class PRAG extends Personnel implements Enseignant{
+public class PRAG extends Personnel implements Cloneable, Enseignant{
 	
 	private int echelon;
 	
