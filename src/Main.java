@@ -1,6 +1,8 @@
 import java.io.IOException;
 import java.util.Scanner;
 
+import javax.xml.bind.annotation.XmlMimeType;
+
 import universite.administratif.Laboratoire;
 import universite.administratif.Universite;
 import universite.batiment.SalleTP;
@@ -13,23 +15,7 @@ public class Main {
 		
 		
 		
-		Universite universite = new Universite();
-		
-		Laboratoire l1 = new Laboratoire();
-		Laboratoire l2 = new Laboratoire();
-		
-		universite.ajoutLaboratoire(l1);
-		universite.ajoutLaboratoire(l2);
-		
-		
-		ChargeRecherche c1 = new ChargeRecherche(0, "lel");
-		
-		l1.ajouteChercheur(c1);
-		
-		ChargeRecherche c2 = ((ChargeRecherche)c1.clone());
-		c2.setAnciennete(10);
-		l2.ajouteChercheur(c2);
-		
+		Universite universite = XMLManager.importXML();
 		
 		try {
 			XMLManager.exportToXML(universite);
