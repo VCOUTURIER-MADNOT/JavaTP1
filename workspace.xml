@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Universite></Universite>
+<Universite><Laboratoire><ChargeRecherche><anciennete>0</anciennete><sujetRecherche>lel</sujetRecherche</ChargeRecherche></Laboratoire><Laboratoire><ChargeRecherche><anciennete>10</anciennete><sujetRecherche>lel</sujetRecherche</ChargeRecherche></Laboratoire></Universite>
