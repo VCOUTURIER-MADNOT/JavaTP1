@@ -1,21 +1,14 @@
-import java.io.IOException;
-import java.util.Scanner;
-
-import universite.administratif.Laboratoire;
 import universite.administratif.Universite;
-import universite.batiment.SalleTP;
-import universite.personnel.ChargeRecherche;
 
 
 public class Main {
 
+	public static Universite universite = new Universite();
+	
 	public static void main(String[] args) {
-		
-		
-		
-		Universite universite = new Universite();
-		
-		Laboratoire l1 = new Laboratoire();
+				
+		GUI.menuPrincipal();
+		/*Laboratoire l1 = new Laboratoire();
 		Laboratoire l2 = new Laboratoire();
 		
 		universite.ajoutLaboratoire(l1);
@@ -35,7 +28,7 @@ public class Main {
 			XMLManager.exportToXML(universite);
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
+		}*/
 
 	}
 
