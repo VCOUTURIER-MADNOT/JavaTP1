@@ -2,11 +2,14 @@ package universite.personnel;
 
 import java.util.ArrayList;
 
-public class Professeur extends Personnel implements Enseignant, Chercheur, Cloneable {
+import universite.annotations.MethodeToString;
+
+public class Professeur extends Personnel implements Enseignant, Chercheur{
 
 	private ArrayList<String> matieres;
 	private boolean cherche;
 	
+	@MethodeToString(index = 1, titre = "Créer un professeur.")
 	public Professeur() {
 		super();
 		this.matieres = new ArrayList<String>();
@@ -25,6 +28,7 @@ public class Professeur extends Personnel implements Enseignant, Chercheur, Clon
 		this.cherche = _p.cherche;
 	}
 	
+	@MethodeToString(index = 2, titre = "Lister les matières enseignées par le professeur.")
 	public ArrayList<String> getMatieres() {
 		return matieres;
 	}
@@ -33,14 +37,17 @@ public class Professeur extends Personnel implements Enseignant, Chercheur, Clon
 		this.matieres = _matieres;
 	}
 
+	@MethodeToString(index = 3, titre = "Savoir si le professeur est entrain de réaliser une recherche.")
 	public boolean isCherche() {
 		return cherche;
 	}
 
+	@MethodeToString(index = 4, titre = "Modifier l'état de recherche du professeur.")
 	public void setCherche(boolean cherche) {
 		this.cherche = cherche;
 	}
 
+	@MethodeToString(index = 5, titre = "Supprimer une matière enseignée par le professeur.")
 	public void supprMatiere(String _matiere)
 	{
 		this.matieres.remove(_matiere);
@@ -70,6 +77,20 @@ public class Professeur extends Personnel implements Enseignant, Chercheur, Clon
 	public boolean chercher(String _sujet) {
 		this.cherche = !_sujet.equals("");
 		return true;
+	}
+
+	@Override
+	public String toXML() {
+		String className = this.getClass().toString();
+		String s = "<" + className + ">";
+		for (String matiere : this.matieres)
+		{
+			s += "<matiere>" + matiere + "</matiere>";
+		}
+		
+		s += "<cherche>" + (this.cherche ? "oui" : "non") + "</cherche>";
+		s += "</" + className + ">";
+		return s;
 	}	
 	
 

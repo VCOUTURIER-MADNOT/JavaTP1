@@ -2,12 +2,16 @@ package universite.administratif;
 
 import java.util.ArrayList;
 
-public class Universite implements Cloneable {
+import universite.annotations.MethodeToString;
+import universite.interfaces.XMLSerializer;
+
+public class Universite implements XMLSerializer{
 
 	private ArrayList<UFR> ufrs;
 	private ArrayList<Laboratoire> laboratoires;
 	private ArrayList<Departement> departements;
  	
+	@MethodeToString(index = 1, titre = "Créer une université.")
 	public Universite()
 	{
 		this.ufrs = new ArrayList<UFR>();
@@ -28,6 +32,7 @@ public class Universite implements Cloneable {
 		this.departements = _universite.departements;
 	}
 
+	@MethodeToString(index = 2, titre = "Lister les UFR de l'université.")
 	public ArrayList<UFR> getUfrs() {
 		return this.ufrs;
 	}
@@ -36,6 +41,7 @@ public class Universite implements Cloneable {
 		this.ufrs = _ufrs;
 	}
 
+	@MethodeToString(index = 3, titre = "Lister les laboratoires de l'université.")
 	public ArrayList<Laboratoire> getLaboratoires() {
 		return this.laboratoires;
 	}
@@ -44,6 +50,7 @@ public class Universite implements Cloneable {
 		this.laboratoires = _laboratoires;
 	}
 
+	@MethodeToString(index = 4, titre = "Lister les departements de l'université.")
 	public ArrayList<Departement> getDepartements() {
 		return this.departements;
 	}
@@ -52,30 +59,36 @@ public class Universite implements Cloneable {
 		this.departements = _departements;
 	}
 	
+	@MethodeToString(index = 5, titre = "Ajouter une UFR à l'université.")
 	public void ajoutUFR(UFR _ufr){
 		this.ufrs.add(_ufr);
 	}
 	
+	@MethodeToString(index = 6, titre = "Ajouter un laboratoire à l'université.")
 	public void ajoutLaboratoire(Laboratoire _laboratoire){
 		this.laboratoires.add(_laboratoire);
 	}
 	
+	@MethodeToString(index = 7, titre = "Ajotuer un département à l'université.")
 	public void ajoutDepartement(Departement _departement){
 		this.departements.add(_departement);
 	}
 	
+	@MethodeToString(index = 8, titre = "Supprimer une UFR de l'université.")
 	public void supprUFR(UFR _ufr){
 		this.ufrs.remove(_ufr);
 	}
 	
+	@MethodeToString(index = 9, titre = "Supprimer un laboratoire de l'université.")
 	public void supprLaboratoire(Laboratoire _laboratoire){
 		this.laboratoires.remove(_laboratoire);
 	}
 	
+	@MethodeToString(index = 10, titre = "Supprimer un département de l'université.")
 	public void supprDepartement(Departement _departement){
 		this.departements.remove(_departement);
 	}
-	
+
 	public void supprUFR(int _num){
 		this.ufrs.remove(_num);
 	}
@@ -91,6 +104,25 @@ public class Universite implements Cloneable {
 	public Object clone()
 	{
 		return new Universite(this);
+	}
+	
+	public String toXML(){
+		String className = this.getClass().toString();
+		String s = "<" + className + ">";
+		for(UFR ufr : this.ufrs){
+			s += ufr.toXML();
+		}
+		
+		for(Laboratoire labo : this.laboratoires){
+			s += labo.toXML();
+		}
+		
+		for(Departement dep : this.departements){
+			s += dep.toXML();
+		}
+		
+		s += "</" + className + ">";
+		return s;
 	}
 	
 	@Override

@@ -1,10 +1,13 @@
 package universite.personnel;
 
-public class MaitreDeConf extends Personnel implements Enseignant, Chercheur, Cloneable {
+import universite.annotations.MethodeToString;
+
+public class MaitreDeConf extends Personnel implements Enseignant, Chercheur{
 
 	private String sujetConf;
 	private int nbCours;
 
+	@MethodeToString(index = 1, titre = "Créer un maitre de conférence.")
 	public MaitreDeConf(){
 		super();
 		this.nbCours = 0;
@@ -26,16 +29,25 @@ public class MaitreDeConf extends Personnel implements Enseignant, Chercheur, Cl
 		this.sujetConf = _maitreDeConf.sujetConf;
 	}
 	
+	@MethodeToString(index = 2, titre = "Connaitre le nombre de cours que le maitre de conférence effectue.")
 	public int getNbCours() {
 		return nbCours;
 	}
 
+	@MethodeToString(index = 3, titre = "Modifier le nombre de cours que le maitre de conférence effectue.")
 	public void setNbCours(int _nbCours) {
 		this.nbCours = (_nbCours >= 0) ? _nbCours : 0;
 	}
 	
+	@MethodeToString(index = 4, titre = "Connaitre le sujet de conférence du maitre de conférence.")
 	public String getSujetConf() {
 		return sujetConf;
+	}
+	
+	@MethodeToString(index = 5, titre = "Modifier le sujet de conférence du maitre de conférence.")
+	public void setSujetConf(String _sujetConf)
+	{
+		this.sujetConf = _sujetConf;
 	}
 	
 	public Object clone()
@@ -58,6 +70,16 @@ public class MaitreDeConf extends Personnel implements Enseignant, Chercheur, Cl
 	public boolean chercher(String _sujet) {
 		this.sujetConf = _sujet;
 		return true;
+	}
+
+	@Override
+	public String toXML() {
+		String className = this.getClass().toString();
+		String s = "<" + className + ">";
+		s += "<sujetConf>" + this.sujetConf + "</sujetConf>";
+		s += "<nbCours>" + this.nbCours + "</nbCours>";
+		s += "</" + className + ">";
+		return s;
 	}
 	
 }

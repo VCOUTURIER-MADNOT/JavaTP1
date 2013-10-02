@@ -1,9 +1,12 @@
 package universite.batiment;
 
-public class SalleReunion extends Salle implements Cloneable {
+import universite.annotations.MethodeToString;
+
+public class SalleReunion extends Salle {
 
 	private String nom;
 	
+	@MethodeToString(index = 1, titre = "Créer une salle de réunion.")
 	public SalleReunion() {
 		super();
 		this.nom = new String();
@@ -18,11 +21,13 @@ public class SalleReunion extends Salle implements Cloneable {
 		super();
 		this.nom = _salle.nom;
 	}
-
+	
+	@MethodeToString(index = 2, titre = "Connaitre le nom de la salle.")
 	public String getNom() {
 		return nom;
 	}
 
+	@MethodeToString(index = 3, titre = "Modifier le nom de la salle.")
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
@@ -34,6 +39,15 @@ public class SalleReunion extends Salle implements Cloneable {
 	
 	public Object clone(){
 		return new SalleReunion(this);
+	}
+
+	@Override
+	public String toXML() {
+		String className = this.getClass().toString();
+		String s = "<" + className + ">";
+		s += "<nom>" + this.nom + "</nom>";
+		s += "</" + className + ">";
+		return s;
 	}
 
 }
