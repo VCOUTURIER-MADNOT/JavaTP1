@@ -19,6 +19,12 @@ public abstract class Salle implements Cloneable, XMLSerializer{
 		return "Salle [id=" + id + "]";
 	}
 	
+	public String toXML(){
+		String s = "<id>" + this.id + "</id>";
+		
+		return s;
+	}
+	
 	public abstract Object clone();
 	
 }

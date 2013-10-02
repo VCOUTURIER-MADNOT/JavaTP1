@@ -70,6 +70,7 @@ public class ChargeRecherche extends Personnel implements Cloneable, Chercheur{
 	public String toXML() {
 		String className = this.getClass().getSimpleName();
 		String s = "<" + className + ">";
+		s += super.toXML();
 		s += "<anciennete>" + this.anciennete + "</anciennete>";
 		s += "<sujetRecherche>" + this.sujetRecherche + "</sujetRecherche";
 		s += "</" + className + ">";

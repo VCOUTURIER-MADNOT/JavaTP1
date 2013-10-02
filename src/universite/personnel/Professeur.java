@@ -83,6 +83,7 @@ public class Professeur extends Personnel implements Cloneable, Enseignant, Cher
 	public String toXML() {
 		String className = this.getClass().getSimpleName();
 		String s = "<" + className + ">";
+		s += super.toXML();
 		for (String matiere : this.matieres)
 		{
 			s += "<matiere>" + matiere + "</matiere>";

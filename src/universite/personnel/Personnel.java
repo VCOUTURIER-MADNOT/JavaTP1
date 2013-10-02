@@ -41,6 +41,13 @@ public abstract class Personnel implements Cloneable, XMLSerializer{
 				+ "]";
 	}
 
+	public String toXML(){
+		String s = "<id>" + this.id + "</id>";
+		s += "<nom>" + this.nom + "</nom>";
+		s += "<prenom>" + this.prenom + "</prenom>";
+		
+		return s;	
+	}
 	public abstract Object clone();
 	
 }

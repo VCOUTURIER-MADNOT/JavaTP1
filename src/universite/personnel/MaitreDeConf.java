@@ -76,6 +76,7 @@ public class MaitreDeConf extends Personnel implements Cloneable, Enseignant, Ch
 	public String toXML() {
 		String className = this.getClass().getSimpleName();
 		String s = "<" + className + ">";
+		s += super.toXML();
 		s += "<sujetConf>" + this.sujetConf + "</sujetConf>";
 		s += "<nbCours>" + this.nbCours + "</nbCours>";
 		s += "</" + className + ">";

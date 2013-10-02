@@ -66,6 +66,7 @@ public class Bureau extends Salle implements Cloneable {
 	public String toXML() {
 		String className = this.getClass().getSimpleName();
 		String s = "<" + className + ">";
+		s += super.toXML();
 		for(Personnel personnel : this.proprietaire){
 			s += personnel.toXML();
 		}

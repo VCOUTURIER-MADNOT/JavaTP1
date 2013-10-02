@@ -50,6 +50,7 @@ public class PRAG extends Personnel implements Cloneable, Enseignant{
 	public String toXML() {
 		String className = this.getClass().getSimpleName();
 		String s = "<" + className + ">";
+		s += super.toXML();
 		s += "<echelon>" + this.echelon + "</echelon>";
 		s += "</" + className + ">";
 		return s;
