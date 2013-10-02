@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import universite.personnel.Enseignant;
 
-public class Departement {
+public class Departement implements Cloneable {
 
 	private ArrayList<Enseignant> enseignants;
 	

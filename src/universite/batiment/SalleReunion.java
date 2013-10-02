@@ -1,6 +1,6 @@
 package universite.batiment;
 
-public class SalleReunion extends Salle {
+public class SalleReunion extends Salle implements Cloneable {
 
 	private String nom;
 	

@@ -1,6 +1,6 @@
 package universite.batiment;
 
-public abstract class Salle {
+public abstract class Salle implements Cloneable {
 	
 	private static int 		 currentId = 0;
 	private int 			 id;

@@ -2,7 +2,7 @@ package universite.administratif;
 
 import java.util.ArrayList;
 
-public class Universite {
+public class Universite implements Cloneable {
 
 	private ArrayList<UFR> ufrs;
 	private ArrayList<Laboratoire> laboratoires;

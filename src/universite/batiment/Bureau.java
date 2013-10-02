@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import universite.personnel.Personnel;
 
-public class Bureau extends Salle {
+public class Bureau extends Salle implements Cloneable {
 
 	private ArrayList<Personnel> proprietaire;
 	

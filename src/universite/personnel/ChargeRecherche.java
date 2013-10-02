@@ -1,6 +1,6 @@
 package universite.personnel;
 
-public class ChargeRecherche extends Personnel implements Chercheur{
+public class ChargeRecherche extends Personnel implements Chercheur, Cloneable{
 
 	private int anciennete;
 	private String sujetRecherche;

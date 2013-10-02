@@ -1,6 +1,6 @@
 package universite.personnel;
 
-public class MaitreDeConf extends Personnel implements Enseignant, Chercheur{
+public class MaitreDeConf extends Personnel implements Enseignant, Chercheur, Cloneable {
 
 	private String sujetConf;
 	private int nbCours;

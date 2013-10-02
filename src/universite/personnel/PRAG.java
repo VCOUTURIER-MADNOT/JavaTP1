@@ -1,6 +1,6 @@
 package universite.personnel;
 
-public class PRAG extends Personnel implements Enseignant{
+public class PRAG extends Personnel implements Enseignant, Cloneable {
 	
 	private int echelon;
 	

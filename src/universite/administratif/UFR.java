@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import universite.batiment.Batiment;
 
-public class UFR {
+public class UFR implements Cloneable {
 
 	private ArrayList<Batiment> batiments;
 	private ArrayList<Departement> departements;

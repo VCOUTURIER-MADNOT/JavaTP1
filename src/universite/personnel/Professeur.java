@@ -2,7 +2,7 @@ package universite.personnel;
 
 import java.util.ArrayList;
 
-public class Professeur extends Personnel implements Enseignant, Chercheur{
+public class Professeur extends Personnel implements Enseignant, Chercheur, Cloneable {
 
 	private ArrayList<String> matieres;
 	private boolean cherche;

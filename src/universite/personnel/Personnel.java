@@ -1,6 +1,6 @@
 package universite.personnel;
 
-public abstract class Personnel {
+public abstract class Personnel implements Cloneable {
 	
 	private static int currentId = 0;
 	private int id;

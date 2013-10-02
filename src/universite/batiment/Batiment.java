@@ -2,7 +2,7 @@ package universite.batiment;
 
 import java.util.ArrayList;
 
-public class Batiment implements Cloneable{
+public class Batiment implements Cloneable {
 
 	private static int 		 currentId = 0;
 	private int 			 id;
